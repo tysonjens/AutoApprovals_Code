@@ -41,7 +41,7 @@ SELECT --fc.[Enc_Key]
     inner join [National_Analytics].[dbo].[DIM_PROCEDURE_CODE] dpc on fc.[Procedure_Code_SK] = dpc.[Procedure_Code_SK]
   inner join [NATIONAL_ANALYTICS].[dbo].[DIM_FUND_TYPE] dft on fc.[Fund_Type_SK] = dft.[Fund_Type_SK]
   WHERE
-    dd.[DATE_BK] BETWEEN '2018-08-01' AND '2018-11-01'
+    dd.[DATE_BK] BETWEEN '2018-01-01' AND '2018-12-31'
     AND dft.Fund_Type_Name = 'PROFESSIONAL'
     AND dm.[Super_Region_Name] = 'SOUTHERN CALIFORNIA'
     AND fc.[Capitation_Flag] = 0

@@ -27,7 +27,7 @@ SELECT rd.[PX_CODE] as CPT_Code
     inner join [IADS_V3].[dbo].[LU_REFERRAL_STATUS] lrs on rh.[REFERRAL_STATUS_KEY] = lrs.[Record_Number]
     inner join [IADS_V3].[dbo].[LU_REFERRAL_TYPE] lrt on rh.[REF_TYPE_KEY] = lrt.[REF_TYPE]
   WHERE
-    rh.[DT_RECEIVED] BETWEEN '2019-01-15' and '2019-4-15' 
+    rh.[DT_RECEIVED] BETWEEN '2018-01-01' and '2018-12-31' 
     --AND lrs.[STATUS_TYPE] IN ('APPROVED') 
     --AND lrt.[REFERRAL_TYPE_NAME] = 'PHYSICIAN'
   --AND rd.[PX_CODE] in ('99201', '99202', '99203', '99204', '99205', '99211', '99212', '99213', '99214', '99215')
