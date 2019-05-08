@@ -1,0 +1,4 @@
+SELECT MIN(LEFT([NAME], 25)) as Name
+      ,[PROCEDURE_CODE] as CPT_Code
+  FROM [IADS_V3].[dbo].[LU_PX_CPT]
+  GROUP BY [PROCEDURE_CODE]
