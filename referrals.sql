@@ -1,6 +1,5 @@
 SELECT rd.[PX_CODE] as CPT_Code
 	    ,rh.[HCP_CONNECT_AUTH_NUMBER]
-      --,LEFT(lucpt.[NAME], 25)) as cpt_desc
       ,rh.[REF_TYPE_KEY]
       ,rh.[PPL]
       ,rh.[DT_RECEIVED] as Date_Received
@@ -11,7 +10,7 @@ SELECT rd.[PX_CODE] as CPT_Code
       ,lus.[BILLING_AREA] as Specialty
       ,ls.[BUDGET_COMMUNITY] as region
       ,rd.[UNITS]
-      ,lbp.[PRODUCT_CATEGORY_NAME]
+      ,lbp.[PRODUCT_CATEGORY_NAME] as LOB
   FROM [IADS_V3].[dbo].[REFERRAL_DET] rd
     inner join [IADS_V3].[dbo].[REFERRAL_HDR] rh on rd.[REFERRAL_KEY] = rh.[REFERRAL_KEY]
     inner join [IADS_V3].[dbo].[LU_REFERRING_PROVIDER] lrf on rh.[REFERRING_PROV_KEY] = lrf.[Record_Number]
