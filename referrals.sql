@@ -24,5 +24,5 @@ SELECT rd.[PX_CODE] as CPT_Code
     inner join [IADS_V3].[dbo].[LU_PX_CPT] lucpt on lucpt.[PROCEDURE_CODE] = rd.[PX_CODE]
     inner join [IADS_V3].[dbo].[LU_BENEFIT_PLAN] lbp on lbp.[PATIENT_PLAN_KEY] = rh.[PATIENT_PLAN_KEY]
   WHERE
-    rh.[DT_RECEIVED] BETWEEN '2019-01-01' and '2019-06-30' 
+    rh.[DT_RECEIVED] BETWEEN '2018-01-01' and '2019-01-01' 
   AND ls.[BUDGET_COMMUNITY] in ('San Gabriel Valley', 'South Bay', 'San Fernando Valley', 'Orange County', 'LA/Downtown', 'Long Beach', 'Magan')
