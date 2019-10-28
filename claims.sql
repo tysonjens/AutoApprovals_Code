@@ -14,7 +14,7 @@ FROM [National_Analytics].[dbo].[FACT_CLAIM] fc
     inner join [National_Analytics].[dbo].[DIM_PROCEDURE_CODE] dpc on fc.[Procedure_Code_SK] = dpc.[Procedure_Code_SK]
     inner join [NATIONAL_ANALYTICS].[dbo].[DIM_FUND_TYPE] dft on fc.[Fund_Type_SK] = dft.[Fund_Type_SK]
 WHERE
-    dd.[DATE_BK] BETWEEN '2019-01-01' AND '2019-06-30'
+    dd.[DATE_BK] BETWEEN '2018-10-15' AND '2019-10-15'
     AND dft.Fund_Type_Name = 'PROFESSIONAL'
     AND dm.[Super_Region_Name] = 'SOUTHERN CALIFORNIA'
     AND fc.[Capitation_Flag] = 0
